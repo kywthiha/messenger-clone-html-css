@@ -57,6 +57,8 @@ html {
   width: 50px;
   height: 50px;
   border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .left-sidebar .chat-tollbar .right-chat-tollbar {
@@ -156,7 +158,7 @@ html {
 }
 
 .left-sidebar .recent-list::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.2rem;
   background-color: #f5f5f5;
 }
 
@@ -203,6 +205,8 @@ html {
   width: 60px;
   height: 60px;
   border-radius: 1.7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .left-sidebar .recent-list ul li .message-info {
@@ -308,6 +312,8 @@ html {
   width: 50px;
   border-radius: 1.5rem;
   height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .message-body .message-container .message-header .user .user-info {
@@ -422,6 +428,208 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: scroll;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.message-body .message-container .message-conversation-body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.message-body .message-container .message-conversation-body::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: #f5f5f5;
+}
+
+.message-body .message-container .message-conversation-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(134, 142, 153, 0.1);
+}
+
+.message-body .message-container .message-conversation-body .other-message {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .message {
+  margin: 0.1rem 4rem 0.1rem 0.4rem;
+  max-width: 564px;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .message p {
+  margin: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  background: rgba(134, 142, 153, 0.1);
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .image-message {
+  margin: 0.1rem 4rem 0.1rem 0.4rem;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .image-message img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
+  max-width: 100%;
+  min-height: 24px;
+  width: auto;
+  border-radius: 18px;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .image-message-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.1rem 4rem 0.1rem 0.4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 564px;
+}
+
+.message-body .message-container .message-conversation-body .other-message .message-inbox .image-message-list img {
+  margin: 0.07rem;
+  border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.message-body .message-container .message-conversation-body .other-message .other-message-user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.message-body .message-container .message-conversation-body .other-message .other-message-user-profile img {
+  width: 30px;
+  width: 30px;
+  border-radius: 1.5rem;
+}
+
+.message-body .message-container .message-conversation-body .me-message {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .message {
+  margin: 0.1rem 0.4rem 0.1rem 4rem;
+  max-width: 564px;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .message p {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  background: #0099ff;
+  -o-object-fit: cover;
+     object-fit: cover;
+  color: white;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .image-message {
+  margin: 0.1rem 0.4rem 0.1rem 4rem;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .image-message img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
+  max-width: 100%;
+  min-height: 24px;
+  width: auto;
+  border-radius: 18px;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .image-message-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0.1rem 0.4rem 0.1rem 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 564px;
+}
+
+.message-body .message-container .message-conversation-body .me-message .message-inbox .image-message-list img {
+  margin: 0.07rem;
+  border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.message-body .message-container .message-conversation-body .message-date {
+  margin: 0.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.7rem;
 }
 
 @media only screen and (max-width: 900px) {
