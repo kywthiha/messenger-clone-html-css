@@ -72,8 +72,9 @@ html {
 }
 
 .left-sidebar .chat-tollbar .right-chat-tollbar a i {
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
   background-color: rgba(134, 142, 153, 0.1);
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
@@ -83,14 +84,12 @@ html {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  margin: 14px;
+  margin: 0.5rem;
 }
 
 .left-sidebar .search input {
   width: 100%;
-  height: 100%;
-  font-size: 1rem;
-  padding: 9px;
+  padding: 0.5rem;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
   background-color: rgba(134, 142, 153, 0.1);
   background-repeat: no-repeat;
@@ -334,20 +333,30 @@ html {
   font-size: 0.7rem;
 }
 
-.message-body .message-container .message-header .message-action-menu ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.message-body .message-container .message-header .message-action-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  vertical-align: middle;
 }
 
-.message-body .message-container .message-header .message-action-menu ul li i {
-  padding: .5rem;
-  margin: .5rem;
+.message-body .message-container .message-header .message-action-menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.message-body .message-container .message-header .message-action-menu div i {
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #0099ff;
   background-color: rgba(134, 142, 153, 0.1);
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
@@ -379,11 +388,13 @@ html {
 }
 
 .message-body .message-container .message-toolbar div i {
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #0099ff;
   background-color: rgba(134, 142, 153, 0.1);
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
+  cursor: pointer;
 }
 
 .message-body .message-container .message-toolbar .message-input {
@@ -391,8 +402,8 @@ html {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   min-height: 1rem;
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   outline: 0;
   resize: vertical;
   max-height: 100px;
