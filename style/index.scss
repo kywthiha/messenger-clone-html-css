@@ -57,7 +57,7 @@ html {
 
     .search {
         flex: none;
-        margin: 10px;
+        margin: 14px;
         input {
             width: 100%;
             height: 100%;
@@ -230,8 +230,40 @@ html {
             }
         }
         .message-toolbar {
-            background-color: springgreen;
             flex: none;
+            display: flex;
+
+            div{
+                flex:none;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                i{
+                    margin: 10px;
+                    padding: 10px;
+                    background-color: $text-background-color;
+                    clip-path: circle(50% at 50% 50%);
+                }
+            }
+
+            .message-input{
+                flex:1 1 0%;
+                min-height: 1rem;
+                padding: 10px;
+                margin: 10px;
+                outline: 0;
+                resize: vertical;
+                max-height: 100px;
+                border-radius: 1rem;
+                border: 1px solid transparent;
+                background: $text-background-color;
+
+                &::-webkit-scrollbar {
+                    width:0;
+                }
+                
+            }
         }
         .message-conversation-body {
             box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
